@@ -26,6 +26,8 @@ function SoundTrack(){
 	this._gauche = new Audio("audio/gauche.mp3");
 	this._tout_droit = new Audio("audio/tout_droit.mp3");
 	this._derriere = new Audio("audio/derriere.mp3");
+	this._personnage = new Personnage();
+	this._ami = new Ami();
 	
 	SoundTrack.prototype.game_over = function(){
 		this._decompteur = 0;
@@ -123,12 +125,19 @@ function SoundTrack(){
 	}
 	
 	SoundTrack.prototype.ch1_2 = function(i, chapitre, evt){
+		var that = this;
 		if(i == 280 || i == 251){
 			this._feu.addUri('audio/feu.mp3', 10000, "sound1");
 			this._femme.addUri('audio/femme.mp3', 10000, "sound1");
 			this._feu.start("sound1");
 			this._femme.start("sound1");
 			this._vocalblind.tuto3();
+			setTimeout(function(){that._personnage.sonnerie()},7000);
+			setTimeout(function(){that._personnage.personnage4()},12000);
+			setTimeout(function(){that._personnage.personnage5()},15000);
+			setTimeout(function(){that._ami.ami1()},16000);
+			setTimeout(function(){that._personnage.personnage6()},19000);
+			setTimeout(function(){that._ami.ami2()},23000);
 		}
 		if(i > 251){
 			if(evt.keyCode == 39 && this._j < 7){

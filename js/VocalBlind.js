@@ -24,6 +24,26 @@ function VocalBlind(){
 		tuto5.play();
 	}
 	
+	VocalBlind.prototype.tuto6 = function(){
+		var tuto6 = new Audio("audio/tuto6.mp3");
+		tuto6.play();
+	}
+	
+	VocalBlind.prototype.tuto7 = function(){
+		var tuto7 = new Audio("audio/tuto7.mp3");
+		tuto7.play();
+	}
+	
+	VocalBlind.prototype.tuto8 = function(){
+		var tuto8 = new Audio("audio/tuto8.mp3");
+		tuto8.play();
+	}
+	
+	VocalBlind.prototype.tuto9 = function(){
+		var tuto9 = new Audio("audio/tuto9.mp3");
+		tuto9.play();
+	}
+	
 	VocalBlind.prototype.gauche = function(){
 		var gauche = new Audio("audio/gauche.mp3");
 		gauche.play();
@@ -47,5 +67,20 @@ function VocalBlind(){
 	VocalBlind.prototype.cible_verrouillee = function(){
 		var cible_verrouillee = new Audio("audio/cible_verrouillee.mp3");
 		cible_verrouillee.play();
+	}
+	
+	VocalBlind.prototype.montez = function(){
+		var montez = new Audio("audio/monter.mp3");
+		montez.play();
+	}
+	
+	VocalBlind.prototype.descendez = function(){
+		var descendez = new Audio("audio/descendez.mp3");
+		descendez.play();
+	}
+	
+	VocalBlind.prototype.accelerer = function(){
+		var accelerer = new Audio("audio/accelerer.mp3");
+		accelerer.play();
 	}
 }

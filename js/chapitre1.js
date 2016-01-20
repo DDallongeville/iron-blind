@@ -8,12 +8,16 @@ window.onload = function() {
 	var chapitre = 1;
 	var n_interval = 0;
 	var bouclier = new Audio("audio/bouclier.mp3");
+	var personnage = new Personnage();
+	responsiveVoice.setDefaultVoice("French Female");
+	responsiveVoice.speak("Appuyer sur tabulation pour entrer dans la fenetre de jeu.");
 	
 	sound.vent();
-	vocalblind.tuto();
-	setTimeout(function(){sound.explosion()}, 10000);
-	setTimeout(function(){sound.cri()}, 12000);
-	setTimeout(vocalblind.tuto2, 17000);
+	setTimeout(function(){vocalblind.tuto()}, 5000);
+	setTimeout(function(){sound.explosion()}, 15000);
+	setTimeout(function(){sound.cri()}, 17000);
+	setTimeout(function(){personnage.personnage1()}, 20000);
+	setTimeout(vocalblind.tuto2, 22000);
 		canvas.onkeydown = function(evt) {
 			if(sound.get_vie() > 0){
 				if(chapitre == 1){
